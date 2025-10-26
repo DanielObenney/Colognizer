@@ -1,0 +1,520 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Croissant+One&family=Forum&family=Julius+Sans+One&family=Jura:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pridi:wght@200;300;400;500;600;700&family=Red+Rose:wght@300..700&family=Sarala:wght@400;700&display=swap');* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+s
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5efebde; /* light gray */
+  color: #c8d9e6;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2f4156;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* Icons container */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  
+}
+
+.header-icons a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 30px;
+}
+
+.header-icons a:hover {
+  color: #e63946;
+  cursor: pointer;
+}
+
+.bag-icon {
+  gap: 1.5rem;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bag-icon:hover {
+ color: #e63946;
+ cursor: pointer;
+}
+
+.bag-icon .bag-item-count {
+  position: absolute;
+  top: 10px;
+  right: 33px;
+  width: 20px;
+  height: 20px;
+  background: #c8d9e6;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  visibility: hidden;
+}
+
+header h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #f5efeb; /* off-white */
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.bag {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden by default */
+  width: 360px;
+  height: 100%;
+  background: #d3d3d3;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 65px 20px 40px;
+  z-index: 100;
+  overflow: auto;
+  font-family: 'Bodoni Moda', serif;
+  transition: 0.5s;
+  overflow-y: auto;   /* still scrollable */
+  scrollbar-width: none; /* Firefox */
+}
+
+.bag::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
+
+.bag.active {
+  right: 0;
+}
+
+.bag-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Bodoni Moda SC', serif;
+  letter-spacing: 1.2px;
+}
+
+.bag-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bag-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.bag-detail {
+  display: grid;
+  gap: 8px;
+  margin-right: auto;
+}
+
+.bag-product-name {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: 'Jura', sans-serif;
+  font-weight: 300;
+}
+
+.bag-price {
+  font-weight: 500;
+}
+
+.bag-quantity {
+  display: flex;
+  width: 100px;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+.bag-quantity button {
+  background: transparent;
+  width: 30px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.bag-quantity #decrement {
+  color: #f5efeb;
+  background: #2f4156;
+}
+
+.bag-quantity #increment {
+  color: #f5efeb;
+  background: #2f4156;
+  
+}
+.bag-quantity .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  cursor: default;
+}
+
+.remove-item {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.remove-item:hover { 
+  color: maroon;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #2f4156;
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+.total-price {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.btn-buy {
+  display: block;
+  padding: 10px 30px;
+  background: #2f4156;
+  border: none;
+  border-radius: 10px;
+  color: #f5efeb;
+  font-size: 16px;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.bag-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: /* linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), */
+              url('https://i.postimg.cc/MHr2YL91/home-4.png') no-repeat center center/cover;
+  padding: 6rem 2rem;
+  text-align: bottom;
+  height: 100vh;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #567c8c; 
+  font-family: 'Bodoni Moda SC', cursive;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 2rem;
+  font-family: 'Merriweather', sans-serif;
+  color: #567c8c;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+/* Collection Sections */
+.collection {
+  padding: 4rem 2rem;
+}
+
+.collection h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #f43f5e;
+  padding-left: 1rem;
+}
+
+.product-section {
+  margin-bottom: 40px;
+}
+
+.product-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-left: 8px solid #2f4156;
+  padding-left: 10px;
+  color: #111827;
+  text-align: left;
+  font-family: 'Bodoni Moda SC', serif;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* makes it use the same text color as parent/heading */
+}
+
+
+a:link,      /* normal link */
+a:visited,   /* after being clicked */
+a:hover,     /* when hovering */
+a:active {  
+  text-decoration: none; /* keeps your heading color */
+}
+
+.product-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.product-row::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a cleaner look */
+}
+
+.product-card {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  transform: translateY(-5px);
+}
+
+
+.product-info {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  text-align: left;
+  height: fit-content;
+}
+.product-info .product-name {
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  color: #2f4156;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.product-info .product-price,
+.product-info .product-size {
+  font-family: 'Forum', sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2f4156;
+}
+
+.product-price .naira {
+  text-decoration: line-through;
+  text-decoration-style: double;
+}
+
+/* Button styling */
+.add-bag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 2rem;
+  color: #2f4156;
+  cursor: pointer;
+}
+
+.add-bag:hover {
+  cursor: pointer;
+}
+
+.product-card:hover .add-bag {
+  transform: translateY(10px);
+}
+
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden-img {
+  display: none;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 20px;
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 600px) {
+  header {
+    overflow-x: hidden; 
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    height: auto;
+    min-height: 60vh;
+    background-position: center top;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .collection {
+    padding: 2rem 1rem;
+  }
+
+  .product-card {
+    width: 100%;
+    height: 320px;
+    margin: 8px 0;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+} 
+
+/* Footer CSS */
+.site-footer {
+  margin-top: 20px;
+  background: #0a1b2e;
+  color: #f5efeb;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#name1 {
+  color: #f5efeb;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+#links {
+  color: #c8d9e6;
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #999;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #f0c040; /* or your brand highlight color */
+}

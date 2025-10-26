@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colognizer</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=store" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_shopping_cart" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag_speed" />
+  <link rel="stylesheet" type="text/css" href="store.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Colognizer</h1>
+   
+<div class="header-icons">
+      <!-- Store -->
+      <a href="1.html" title="Shop">
+<i class="ri-store-3-line"></i>
+      </a>
+
+      <!-- Cart -->
+      <div id="bag-icon" class="bag-icon" title="Cart">
+<i class="ri-shopping-bag-line"></i>
+<span class="bag-item-count"></span>
+      </div>
+  </header>
+  <div class="bag">
+    <h2 class="bag-title">Shopping Bag</h2>
+    <div class="bag-content">
+      <!-- <div class="bag-box">
+        <img src="https://i.postimg.cc/1XvhYmZj/Dior-sauvage.png" class="bag-img" alt="Dior Sauvage">
+        <div class="bag-detail">
+          <h2 class="bag-product-name">Dior Sauvage</h2>
+          <p class="product-size">100ml</p>
+        <span class="bag-price"><span class="naira">N</span>12000</span>
+        
+        <div class="bag-quantity">
+        <button id="decrement">-</button> 
+        <span class="number">1</span>
+        <button id="increment">+</button>
+        
+        </div>   
+      </div>
+      <i class="ri-delete-bin-2-line remove-item"></i>
+      </div> -->
+    </div>
+<div class="total">
+  <div class="total-title">Total</div>
+  <div class="total-price">NGN  0</div> 
+</div>
+<button class="btn-buy">Checkout</button>
+<i class="ri-close-line bag-close"></i>
+  </div>
+
+  <!-- Hero / Welcome Section -->
+  <section class="hero">
+    <h2>Conquer the air</h2>
+    <p></p>
+  </section>
+<main>
+  <!-- Male Collection -->
+  <section class="product-section">
+      <h2 class="section-title"><a href="male.html">Male Collection</a></h2>
+
+      <div class="product-row">
+
+        <!-- Sample Product Card -->
+        <div class="product-card" style="background-image: url('https://i.postimg.cc/1XvhYmZj/Dior-sauvage.png');" data-gender="male">
+          <div class="product-info">
+            <img src="https://i.postimg.cc/1XvhYmZj/Dior-sauvage.png" class="hidden-img" alt="Dior Sauvage">
+            <h2 class="product-name">Dior Sauvage</h2>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 60,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/30/7466131/1.jpg?8544');" data-gender="male">
+          <div class="product-info">
+            <img src="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/30/7466131/1.jpg?8544" class="hidden-img" alt="Armaf Club De Nuit Intense">
+            <h3 class="product-name">Club De Nuit Intense EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 55,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+                 <div class="product-card" style="background-image: url('https://img.lazcdn.com/g/ff/kf/Sd1b6cb6712fd47d49d33d3ec2f65652bf.jpg_720x720q80.jpg');" data-gender="male">
+          <div class="product-info">
+            <img src="https://img.lazcdn.com/g/ff/kf/Sd1b6cb6712fd47d49d33d3ec2f65652bf.jpg_720x720q80.jpg" class="hidden-img" alt="Asad Lattafa">
+            <h3 class="product-name">Asad Lattafa</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 25,000</span>
+
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <!-- Add more -->
+         <div class="product-card" style="background-image: url('https://i.pinimg.com/originals/56/ff/df/56ffdf6b79e4ebb0671a1707bf40f254.jpg');" data-gender="male">
+          <div class="product-info">  
+            <img src="https://i.pinimg.com/originals/56/ff/df/56ffdf6b79e4ebb0671a1707bf40f254.jpg" class="hidden-img"> 
+            <h3 class="product-name">Arfan 9pm</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 60,000</span>
+
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <!-- Add more -->
+        <div class="product-card" style="background-image: url('https://soghaat.co.uk/wp-content/uploads/2024/03/Giorgio-Black-Special-Edition-Perfume-Eau-De-Parfum-100ml-by-Fragrance-World-.webp');" data-gender="male">
+          <div class="product-info">
+            <img src="https://soghaat.co.uk/wp-content/uploads/2024/03/Giorgio-Black-Special-Edition-Perfume-Eau-De-Parfum-100ml-by-Fragrance-World-.webp" class="hidden-img">
+            <h3 class="product-name">Giorgio Black EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 45,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i> 
+          </div>
+        </div>
+        <!-- Add more -->
+        <!-- Add more -->
+
+        <!-- Add more -->
+        <!-- Add more -->
+      </section>
+
+
+  <!-- Female Collection -->
+   <section class="product-section">
+      <h2 class="section-title"><a href="male.html">Female Collection</a></h2>
+      <div class="product-row">
+        <div class="product-card" style="background-image: url('https://image.s5a.com/is/image/saks/0400095177980?wid=900');" data-gender="female">
+          <div class="product-info">
+            <img src="https://image.s5a.com/is/image/saks/0400095177980?wid=900" class="hidden-img" alt="Baccarat Rouge 540 EDP">
+            <h3 class="product-name">Baccarat Rouge 540 EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 25,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://www.parfimo.gr/data/cache/thumb_min500_max2000-min500_max1000-0/products/46888/1530431726/victoria-s-secret-bombshell-parfyumna-voda-dla-kobiet-100-ml-219419.jpg');" data-gender="female">
+          <div class="product-info">
+            <img src="https://www.parfimo.gr/data/cache/thumb_min500_max2000-min500_max1000-0/products/46888/1530431726/victoria-s-secret-bombshell-parfyumna-voda-dla-kobiet-100-ml-219419.jpg" class="hidden-img" alt="Victoria's Secret Bombshell EDP">
+            <h3 class="product-name">Victoria's Secret EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 30,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.LOVoLr8GE4runuqXpIDzqQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3');" data-gender="female">
+          <div class="product-info">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.LOVoLr8GE4runuqXpIDzqQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" class="hidden-img" alt="Coco Mademoiselle EDP">
+            <h3 class="product-name">Coco Mademoiselle EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 45,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.OFmCJDbyLy2SyAFpizaEggHaHa?rs=1&pid=ImgDetMain&o=7&rm=3');" data-gender="female">
+          <div class="product-info">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.OFmCJDbyLy2SyAFpizaEggHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="hidden-img" alt="Dior J'adore EDP">
+            <h3 class="product-name">Dior J'adore EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 60,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://munacosmetics.com/image/cache/catalog/Dreamer/mousuf-wardi-perfume-500x500.jpg');" data-gender="female">
+          <div class="product-info">
+            <img src="https://munacosmetics.com/image/cache/catalog/Dreamer/mousuf-wardi-perfume-500x500.jpg" class="hidden-img" alt="Mousuf Wardi EDP">
+            <h3 class="product-name">Mousuf Wardi EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 25,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <!-- Recently Added -->
+  <section class="product-section">
+      <h2 class="section-title"><a href="male.html">Recently Added</a></h2>
+      <div class="product-row">
+       <div class="product-card" style="background-image: url('https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/04/1-52.jpg');" data-gender="female">
+          <div class="product-info">
+            <img src="https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/04/1-52.jpg" class="hidden-img" alt="Mousuf Wardi EDP">
+            <h3 class="product-name">Vintage Radio by Lattafa EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 25,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+
+        <div class="product-card" style="background-image: url('https://dscentsation.ng/cdn/shop/files/Afnan9pmRebelEDP100ml.jpg?v=1732795542');" data-gender="female">
+          <div class="product-info">
+            <img src="https://dscentsation.ng/cdn/shop/files/Afnan9pmRebelEDP100ml.jpg?v=1732795542" class="hidden-img" alt="Afnan Rebel EDP">
+            <h3 class="product-name">Afnan Rebel EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 60,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+
+        <div class="product-card" style="background-image: url('https://res.cloudinary.com/azzaro-parfums/image/upload/c_fill,w_1000,h_1117/products/AZZARO_TMW_PARFUM_100ML_MONTAGE.png');" data-gender="female">
+          <div class="product-info">
+            <img src="https://res.cloudinary.com/azzaro-parfums/image/upload/c_fill,w_1000,h_1117/products/AZZARO_TMW_PARFUM_100ML_MONTAGE.png" class="hidden-img" alt="Mousuf Wardi EDP">
+            <h3 class="product-name">Azzaro Most Wanted EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 82,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+
+        <div class="product-card" style="background-image: url('https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/05/1-79.jpg');" data-gender="female">
+          <div class="product-info">
+            <img src="https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/05/1-79.jpg" class="hidden-img" alt="Mousuf Wardi EDP">
+            <h3 class="product-name">Khamrah Lattafa EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 78,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+        <div class="product-card" style="background-image: url('https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/05/1-78.jpg');" data-gender="female">
+          <div class="product-info">
+            <img src="https://cdn-ilboccp.nitrocdn.com/SDkrODIaeNZRdZfqHcJERwUgHcFSfjDQ/assets/images/optimized/rev-e2f1a00/lattafa.com/wp-content/uploads/2024/05/1-78.jpg" class="hidden-img" alt="Mousuf Wardi EDP">
+            <h3 class="product-name">Yara Lattafa EDP</h3>
+            <p class="product-size">100ml</p>
+            <span class="product-price">NGN 65,000</span>
+            <i class="ri-shopping-bag-2-line add-bag" title="Add to Bag"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer Section-->
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3 id="name1">Colognizer</h3>
+      <p>Discover your signature scent. Conquer the air</p>
+    </div>
+    <div class="footer-section links">
+      <h4 id="links">Quick Links</h4>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#Collection">Products</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h4 id="links">Contact Us</h4>
+      <p>Email: support@Colognizer.com</p>
+      <p>Phone: +234 803 394 3156</p>
+    </div>
+  </div>
+  <div class="social-icons">
+      <a href="https://instagram.com/Daniel Obenney" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com/yourhandle" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/+2348033943156" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  <div class="footer-bottom">
+    &copy; 2025 Colognizer. All rights reserved.
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
